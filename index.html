@@ -1,0 +1,302 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<base href="./node_modules/reveal.js/">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/night.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<style type="text/css">
+			.whoami pre {
+				font-size: 70%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h3>Sistema Embarcado para Contagem de Pessoas em Ambiente Fechado usando Sensores Infravermelho</h3>
+					<p>
+						<small>AUTORES: José Ailton B. da Silva, Artur F. Moreira, Rangel H. Félix, Paulo César H. da Silva, Arthur Cezar V. de Melo</small>
+					</p>
+				</section>
+				<section>
+					<h4>Esquema do Projeto</h4>
+					<img src="../../imgs/esquema.png">
+				</section>
+				<section>
+					<h4>Diagrama de Blocos</h4>
+					<img src="../../imgs/diagrama.png">
+				</section>
+				<section>
+					<h4>Sensores Infravermelho de presença</h4>
+					<img src="../../imgs/sensor.png" style="width: 45%;">
+				</section>
+				<section>
+					<h4>Lista de componentes usados</h4>
+<table style="font-size: 14pt;">
+  <thead>
+    <tr>
+      <th>
+        Quantidade
+      </th>
+      <th>
+        Tipo
+      </th>
+      <th>
+        Refer&ecirc;ncia
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        6
+      </td>
+      <td>
+        Resistores
+      </td>
+      <td>
+        150 ohm
+      </td>
+    </tr>
+    <tr>
+      <td>
+        2
+      </td>
+      <td>
+        Resistores
+      </td>
+      <td>
+        1 K ohm
+      </td>
+    </tr>
+    <tr>
+      <td>
+        1
+      </td>
+      <td>
+        Resistor
+      </td>
+      <td>
+        2,2 K ohm
+      </td>
+    </tr>
+    <tr>
+      <td>
+        4
+      </td>
+      <td>
+        Resistores
+      </td>
+      <td>
+        10 K ohm
+      </td>
+    </tr>
+    <tr>
+      <td>
+        2
+      </td>
+      <td>
+        Capacitores
+      </td>
+      <td>
+        10uF
+      </td>
+    </tr>
+    <tr>
+      <td>
+        2
+      </td>
+      <td>
+        Capacitores
+      </td>
+      <td>
+        22pF
+      </td>
+    </tr>
+    <tr>
+      <td>
+        1
+      </td>
+      <td>
+        Microcontrolador
+      </td>
+      <td>
+        PIC18F4550
+      </td>
+    </tr>
+    <tr>
+      <td>
+        2
+      </td>
+      <td>
+        Transistores
+      </td>
+      <td>
+        BC547
+      </td>
+    </tr>
+    <tr>
+      <td>
+        1
+      </td>
+      <td>
+        Diodo
+      </td>
+      <td>
+        1n4007
+      </td>
+    </tr>
+    <tr>
+      <td>
+        2
+      </td>
+      <td>
+        LED&rsquo;s infravermelho
+      </td>
+      <td>
+        -
+      </td>
+    </tr>
+    <tr>
+      <td>
+        2
+      </td>
+      <td>
+        Fotodiodos
+      </td>
+      <td>
+        -
+      </td>
+    </tr>
+    <tr>
+      <td>
+        30
+      </td>
+      <td>
+        Pinos
+      </td>
+      <td>
+        2 cm
+      </td>
+    </tr>
+    <tr>
+      <td>
+        1
+      </td>
+      <td>
+        Potenci&ocirc;metro
+      </td>
+      <td>
+        1 K ohm
+      </td>
+    </tr>
+    <tr>
+      <td>
+        1
+      </td>
+      <td>
+        Cristal Oscilador
+      </td>
+      <td>
+        20MHz
+      </td>
+    </tr>
+    <tr>
+      <td>
+        1
+      </td>
+      <td>
+        Display LCD
+      </td>
+      <td>
+        16X2
+      </td>
+    </tr>
+    <tr>
+      <td>
+        1
+      </td>
+      <td>
+        Teclado Matricial
+      </td>
+      <td>
+        3X4
+      </td>
+    </tr>
+    <tr>
+      <td>
+        1
+      </td>
+      <td>
+        Cabo USB
+      </td>
+      <td>
+        -
+      </td>
+    </tr>
+  </tbody>
+</table>
+				</section>
+				<section>
+					<h4>Esquema completo do projeto</h4>
+					<img src="../../imgs/circuito.png">
+				</section>
+				<section>
+					<h4>Esquema para prototipação</h4>
+					<img src="../../imgs/esquema2.png" style="width: 80%;">
+				</section>
+				<section>
+					<h4>Fotolito</h4>
+					<img src="../../imgs/fotolito.png"  style="width: 75%;">
+				</section>
+				<section>
+					<h4>Software no computador</h4>
+					<img src="../../imgs/software.png">
+				</section>
+				<section>
+					<h1>Dúvidas?</h1>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				history: true,
+				transition: 'convex',
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>
